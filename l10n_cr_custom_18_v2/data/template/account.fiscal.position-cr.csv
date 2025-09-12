@@ -1,1 +1,5 @@
-id,sequence,name,auto_apply,vat_required,country_id,country_group_id,tax_ids/tax_src_id,tax_ids/tax_dest_id,account_ids/account_src_id,account_ids/account_dest_id
+id,sequence,name
+cr_fp_ventas_ley_especial,10,Ventas autorizadas sin impuesto (Ley especial)
+cr_fp_ventas_no_sujetas_art9,20,Ventas no sujetas (Art.9)
+cr_fp_ventas_dgh,30,Ventas autorizadas sin impuesto (DGH)
+cr_fp_sujetas_iva_general,40,Sujetas a IVA general

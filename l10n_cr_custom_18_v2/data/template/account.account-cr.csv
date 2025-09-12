@@ -1,11 +1,11 @@
 id,name,code,account_type,reconcile,non_trade
-cr_coa_1010101,Efectivo,1010101,asset_current,False,False
-cr_coa_1010201,Caja chica,1010201,asset_current,False,False
-cr_coa_1010301,Cuenta bancaria 1,1010301,asset_current,False,False
-cr_coa_1010302,Cuenta bancaria 2,1010302,asset_current,False,False
-cr_coa_1010303,Cuenta bancaria 3,1010303,asset_current,False,False
-cr_coa_1010304,Cuenta bancaria 4,1010304,asset_current,False,False
-cr_coa_1010401,Otras cuentas electronicas,1010401,asset_current,False,False
+cr_coa_1010101,Efectivo,1010101,asset_cash,False,False
+cr_coa_1010201,Caja chica,1010201,asset_cash,False,False
+cr_coa_1010301,Cuenta bancaria 1,1010301,asset_cash,False,False
+cr_coa_1010302,Cuenta bancaria 2,1010302,asset_cash,False,False
+cr_coa_1010303,Cuenta bancaria 3,1010303,asset_cash,False,False
+cr_coa_1010304,Cuenta bancaria 4,1010304,asset_cash,False,False
+cr_coa_1010401,Otras cuentas electronicas,1010401,asset_cash,False,False
 cr_coa_1020101,Fondos en tránsito en tesorería,1020101,asset_current,False,False
 cr_coa_1020201,Fondos en tránsito Datáfonos,1020201,asset_current,False,False
 cr_coa_1020301,Cuenta transitoria de conciliación bancaria,1020301,asset_current,False,False
@@ -76,19 +76,19 @@ cr_coa_3030201,Utilidad o perdida del periodo actual,3030201,equity,False,False
 cr_coa_3040101,Balance inicial de saldos,3040101,equity,False,False
 cr_coa_4110101,Ingresos por venta de servicios,4110101,income,False,False
 cr_coa_4110201,Ingresos por ventas de bienes,4110201,income,False,False
-cr_coa_4210101,Intereses ganados sobre inversiones,4210101,other_income,False,False
-cr_coa_4210201,Intereses ganados sobre cuentas de ahorros,4210201,other_income,False,False
-cr_coa_4310101,Ingresos procedentes de donaciones,4310101,other_income,False,False
-cr_coa_4410101,Ganancias por diferencias de cambio,4410101,other_income,False,False
-cr_coa_4510101,Otros ingresos,4510101,other_income,False,False
-cr_coa_5110101,Costo de los productos vendidos,5110101,cost_of_revenue,False,False
-cr_coa_5110201,Costos de salarios (incluye las cargas sociales),5110201,cost_of_revenue,False,False
-cr_coa_5110301,Costo de materiales y suministros,5110301,cost_of_revenue,False,False
-cr_coa_5110401,Costo de los servicios,5110401,cost_of_revenue,False,False
-cr_coa_5110501,Costo de producción,5110501,cost_of_revenue,False,False
-cr_coa_5110601,Costo de almacenamiento,5110601,cost_of_revenue,False,False
-cr_coa_5110701,Costo de distribución y transporte,5110701,cost_of_revenue,False,False
-cr_coa_5110801,Otros costos indirectos,5110801,cost_of_revenue,False,False
+cr_coa_4210101,Intereses ganados sobre inversiones,4210101,income_other,False,False
+cr_coa_4210201,Intereses ganados sobre cuentas de ahorros,4210201,income_other,False,False
+cr_coa_4310101,Ingresos procedentes de donaciones,4310101,income_other,False,False
+cr_coa_4410101,Ganancias por diferencias de cambio,4410101,income_other,False,False
+cr_coa_4510101,Otros ingresos,4510101,income_other,False,False
+cr_coa_5110101,Costo de los productos vendidos,5110101,expense_direct_cost,False,False
+cr_coa_5110201,Costos de salarios (incluye las cargas sociales),5110201,expense_direct_cost,False,False
+cr_coa_5110301,Costo de materiales y suministros,5110301,expense_direct_cost,False,False
+cr_coa_5110401,Costo de los servicios,5110401,expense_direct_cost,False,False
+cr_coa_5110501,Costo de producción,5110501,expense_direct_cost,False,False
+cr_coa_5110601,Costo de almacenamiento,5110601,expense_direct_cost,False,False
+cr_coa_5110701,Costo de distribución y transporte,5110701,expense_direct_cost,False,False
+cr_coa_5110801,Otros costos indirectos,5110801,expense_direct_cost,False,False
 cr_coa_5210101,Salarios,5210101,expense,False,False
 cr_coa_5210201,Salario extra,5210201,expense,False,False
 cr_coa_5210301,Bonificaciones y comisiones salariales,5210301,expense,False,False
@@ -120,11 +120,16 @@ cr_coa_5315101,Patentes e impuestos,5315101,expense,False,False
 cr_coa_5316101,Uniformes,5316101,expense,False,False
 cr_coa_5317101,Suministros de aseo,5317101,expense,False,False
 cr_coa_5318101,Otros gastos administrativos,5318101,expense,False,False
-cr_coa_5410101,Gastos por intereses,5410101,other_expense,False,False
-cr_coa_5410201,Gastos por comisiones bancarias,5410201,other_expense,False,False
-cr_coa_5410301,Perdidas por diferencias de cambio,5410301,other_expense,False,False
-cr_coa_5510101,Gastos por donaciones deducibles,5510101,other_expense,False,False
-cr_coa_5610101,Gastos por perdidas de inventarios,5610101,other_expense,False,False
-cr_coa_5710101,Gastos por multas,5710101,other_expense,False,False
-cr_coa_5810101,Depreciación del activo fijo,5810101,expense,False,False
-cr_coa_6010101,Gastos no deducibles,6010101,other_expense,False,False
+cr_coa_5410101,Gastos por intereses,5410101,expense_other,False,False
+cr_coa_5410201,Gastos por comisiones bancarias,5410201,expense_other,False,False
+cr_coa_5410301,Perdidas por diferencias de cambio,5410301,expense_other,False,False
+cr_coa_5510101,Gastos por donaciones deducibles,5510101,expense_other,False,False
+cr_coa_5610101,Gastos por perdidas de inventarios,5610101,expense_other,False,False
+cr_coa_5710101,Gastos por multas,5710101,expense_other,False,False
+cr_coa_5810101,Depreciación del activo fijo,5810101,expense_depreciation,False,False
+cr_coa_6010101,Gastos no deducibles,6010101,expense_other,False,False
+cr_coa_999001,Ganancia por diferencia de efectivo,9999001,income_other,False,False
+cr_coa_999002,Pérdida por diferencia de efectivo,9999002,expense_other,False,False
+cr_coa_999997,Ganancia por descuento por pronto pago,9999997,income_other,False,False
+cr_coa_999998,Pérdida por descuento por pronto pago,9999998,expense_other,False,False
+cr_coa_999999,Ganancias/pérdidas no distribuidas,9999999,equity_unaffected,False,False
