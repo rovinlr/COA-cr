@@ -1,11 +1,11 @@
-id,sequence,name,name@es,name@ca,auto_apply,vat_required,country_id,country_group_id,tax_ids/tax_src_id,tax_ids/tax_dest_id,account_ids/account_src_id,account_ids/account_dest_id
-cr_fp_ventas_ley_especial,10,Ventas autorizadas sin impuesto (Ley especial),,,0,,base.cr,,,,,
-,,,,,,,,,cr_tax_iva_13_servicios_v,cr_tax_iva_exento_v,,
-,,,,,,,,,cr_tax_iva_13_bienes_v,cr_tax_iva_exento_v,,
-cr_fp_ventas_no_sujetas_art9,20,Ventas no sujetas (Art.9),,,0,,base.cr,,,,,
-,,,,,,,,,cr_tax_iva_13_servicios_v,cr_tax_iva_no_sujeto_v,,
-,,,,,,,,,cr_tax_iva_13_bienes_v,cr_tax_iva_no_sujeto_v,,
-cr_fp_ventas_dgh,30,Ventas autorizadas sin impuesto (DGH),,,0,,base.cr,,,,,
-,,,,,,,,,cr_tax_iva_13_servicios_v,cr_tax_iva_exonerado_13_v,,
-,,,,,,,,,cr_tax_iva_13_bienes_v,cr_tax_iva_exonerado_13_v,,
-cr_fp_sujetas_iva_general,40,Sujetas a IVA general,,,0,,base.cr,,,,,
+id;sequence;name;auto_apply;vat_required;country_id;country_group_id;tax_ids/tax_src_id;tax_ids/tax_dest_id;account_ids/account_src_id;account_ids/account_dest_id
+cr_fp_ventas_ley_especial;10;Ventas autorizadas sin impuesto (Ley especial);0;;base.cr;;;;;
+;;;;;;;cr_tax_iva_13_servicios_v;cr_tax_iva_exento_v;;
+;;;;;;;cr_tax_iva_13_bienes_v;cr_tax_iva_exento_v;;
+cr_fp_ventas_no_sujetas_art9;20;Ventas no sujetas (Art.9);0;;base.cr;;;;;
+;;;;;;;cr_tax_iva_13_servicios_v;cr_tax_iva_no_sujeto_v;;
+;;;;;;;cr_tax_iva_13_bienes_v;cr_tax_iva_no_sujeto_v;;
+cr_fp_ventas_dgh;30;Ventas autorizadas sin impuesto (DGH);0;;base.cr;;;;;
+;;;;;;;cr_tax_iva_13_servicios_v;cr_tax_iva_exonerado_13_v;;
+;;;;;;;cr_tax_iva_13_bienes_v;cr_tax_iva_exonerado_13_v;;
+cr_fp_sujetas_iva_general;40;Sujetas a IVA general;0;;base.cr;;;;;
