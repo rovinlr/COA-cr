@@ -128,8 +128,3 @@ cr_coa_5610101,Gastos por perdidas de inventarios,5610101,other_expense,False,Fa
 cr_coa_5710101,Gastos por multas,5710101,other_expense,False,False
 cr_coa_5810101,Depreciación del activo fijo,5810101,expense,False,False
 cr_coa_6010101,Gastos no deducibles,6010101,other_expense,False,False
-cr_coa_999001,Ganancia por diferencia de efectivo,999001,other_income,False,False
-cr_coa_999002,Pérdida por diferencia de efectivo,999002,other_expense,False,False
-cr_coa_999997,Ganancia por descuento por pronto pago,999997,other_income,False,False
-cr_coa_999998,Pérdida por descuento por pronto pago,999998,other_expense,False,False
-cr_coa_999999,Ganancias/pérdidas no distribuidas,999999,equity,False,False
