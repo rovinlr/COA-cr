@@ -1,101 +1,101 @@
-id,name,type_tax_use,amount,amount_type,description,invoice_label,tax_group_id,repartition_line_ids/repartition_type,repartition_line_ids/document_type,repartition_line_ids/account_id
-cr_tax_iva_13_servicios_v,IVA 13% servicios (V),sale,13,percent,Impuesto al Valor Agregado (V),IVA 13% servicio,cr_tax_group_tarifa_general_13,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+id,name,type_tax_use,amount,amount_type,description,invoice_label,tax_group_id/id,repartition_line_ids/repartition_type,repartition_line_ids/document_type,repartition_line_ids/account_id/id
+cr_tax_iva_13_servicios_v,IVA 13% servicios (V),sale,13,percent,Impuesto al Valor Agregado (V),IVA 13% servicio,l10n_cr_custom_18_v2.cr_tax_group_tarifa_general_13,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_13_bienes_v,IVA 13% bienes (V),sale,13,percent,Impuesto al Valor Agregado (V),IVA 13% bienes,cr_tax_group_tarifa_general_13,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_13_bienes_v,IVA 13% bienes (V),sale,13,percent,Impuesto al Valor Agregado (V),IVA 13% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_general_13,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_4_servicios_v,IVA 4% servicios (V),sale,4,percent,Impuesto al Valor Agregado (V),IVA 4% servicio,cr_tax_group_tarifa_reducida_4,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_4_servicios_v,IVA 4% servicios (V),sale,4,percent,Impuesto al Valor Agregado (V),IVA 4% servicio,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_4,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_4_bienes_v,IVA 4% bienes (V),sale,4,percent,Impuesto al Valor Agregado (V),IVA 4% bienes,cr_tax_group_tarifa_reducida_4,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_4_bienes_v,IVA 4% bienes (V),sale,4,percent,Impuesto al Valor Agregado (V),IVA 4% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_4,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_2_servicios_v,IVA 2% servicios (V),sale,2,percent,Impuesto al Valor Agregado (V),IVA 2% servicios,cr_tax_group_tarifa_reducida_2,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_2_servicios_v,IVA 2% servicios (V),sale,2,percent,Impuesto al Valor Agregado (V),IVA 2% servicios,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_2,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_2_bienes_v,IVA 2% bienes (V),sale,2,percent,Impuesto al Valor Agregado (V),IVA 4% bienes,cr_tax_group_tarifa_reducida_2,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_2_bienes_v,IVA 2% bienes (V),sale,2,percent,Impuesto al Valor Agregado (V),IVA 4% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_2,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_1_servicios_v,IVA 1% servicios (V),sale,1,percent,Impuesto al Valor Agregado (V),IVA 1% servicios,cr_tax_group_tarifa_reducida_1,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_1_servicios_v,IVA 1% servicios (V),sale,1,percent,Impuesto al Valor Agregado (V),IVA 1% servicios,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_1,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_1_bienes_v,IVA 1% bienes (V),sale,1,percent,Impuesto al Valor Agregado (V),IVA 1% bienes,cr_tax_group_tarifa_reducida_1,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_1_bienes_v,IVA 1% bienes (V),sale,1,percent,Impuesto al Valor Agregado (V),IVA 1% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_1,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_exento_v,IVA exento (V),sale,0,percent,Impuesto al Valor Agregado (V),IVA exento,cr_tax_group_exentos,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_exento_v,IVA exento (V),sale,0,percent,Impuesto al Valor Agregado (V),IVA exento,l10n_cr_custom_18_v2.cr_tax_group_exentos,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_no_sujeto_v,IVA no sujeto (V),sale,0,percent,Impuesto al Valor Agregado (V),IVA no sujeto,cr_tax_group_no_sujetos,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_no_sujeto_v,IVA no sujeto (V),sale,0,percent,Impuesto al Valor Agregado (V),IVA no sujeto,l10n_cr_custom_18_v2.cr_tax_group_no_sujetos,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_exonerado_13_v,IVA Exonerado 13% (V),sale,0,percent,Impuesto al Valor Agregado (V),IVA Exonerado 13%,cr_tax_group_exonerados,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_2020101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_exonerado_13_v,IVA Exonerado 13% (V),sale,0,percent,Impuesto al Valor Agregado (V),IVA Exonerado 13%,l10n_cr_custom_18_v2.cr_tax_group_exonerados,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_2020101
-cr_tax_iva_13_servicios_c,IVA 13% servicios (C),purchase,13,percent,Impuesto al Valor Agregado (C),IVA 13% servicio,cr_tax_group_tarifa_general_13,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_2020101
+cr_tax_iva_13_servicios_c,IVA 13% servicios (C),purchase,13,percent,Impuesto al Valor Agregado (C),IVA 13% servicio,l10n_cr_custom_18_v2.cr_tax_group_tarifa_general_13,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_13_bienes_c,IVA 13% bienes (C),purchase,13,percent,Impuesto al Valor Agregado (C),IVA 13% bienes,cr_tax_group_tarifa_general_13,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_13_bienes_c,IVA 13% bienes (C),purchase,13,percent,Impuesto al Valor Agregado (C),IVA 13% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_general_13,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_13_bienes_de_capital_c,IVA 13% bienes de capital (C),purchase,13,percent,Impuesto al Valor Agregado (C),IVA bines de capital 13%,cr_tax_group_bienes_de_capital,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_13_bienes_de_capital_c,IVA 13% bienes de capital (C),purchase,13,percent,Impuesto al Valor Agregado (C),IVA bines de capital 13%,l10n_cr_custom_18_v2.cr_tax_group_bienes_de_capital,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_4_servicios_c,IVA 4% servicios (C),purchase,4,percent,Impuesto al Valor Agregado (C),IVA 4% servicio,cr_tax_group_tarifa_reducida_4,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_4_servicios_c,IVA 4% servicios (C),purchase,4,percent,Impuesto al Valor Agregado (C),IVA 4% servicio,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_4,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_4_bienes_c,IVA 4% bienes (C),purchase,4,percent,Impuesto al Valor Agregado (C),IVA 4% bienes,cr_tax_group_tarifa_reducida_4,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_4_bienes_c,IVA 4% bienes (C),purchase,4,percent,Impuesto al Valor Agregado (C),IVA 4% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_4,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_2_servicios_c,IVA 2% servicios (C),purchase,2,percent,Impuesto al Valor Agregado (C),IVA 2% servicio,cr_tax_group_tarifa_reducida_2,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_2_servicios_c,IVA 2% servicios (C),purchase,2,percent,Impuesto al Valor Agregado (C),IVA 2% servicio,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_2,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_2_bienes_c,IVA 2% bienes (C),purchase,2,percent,Impuesto al Valor Agregado (C),IVA 2% bienes,cr_tax_group_tarifa_reducida_2,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_2_bienes_c,IVA 2% bienes (C),purchase,2,percent,Impuesto al Valor Agregado (C),IVA 2% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_2,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_1_servicios_c,IVA 1% servicios (C),purchase,1,percent,Impuesto al Valor Agregado (C),IVA 1% servicio,cr_tax_group_tarifa_reducida_1,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_1_servicios_c,IVA 1% servicios (C),purchase,1,percent,Impuesto al Valor Agregado (C),IVA 1% servicio,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_1,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_1_bienes_c,IVA 1% bienes (C),purchase,1,percent,Impuesto al Valor Agregado (C),IVA 1% bienes,cr_tax_group_tarifa_reducida_1,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_1_bienes_c,IVA 1% bienes (C),purchase,1,percent,Impuesto al Valor Agregado (C),IVA 1% bienes,l10n_cr_custom_18_v2.cr_tax_group_tarifa_reducida_1,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_exentos_c,IVA exentos (C),purchase,0,percent,Impuesto al Valor Agregado (C),IVA exento,cr_tax_group_exentos,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_exentos_c,IVA exentos (C),purchase,0,percent,Impuesto al Valor Agregado (C),IVA exento,l10n_cr_custom_18_v2.cr_tax_group_exentos,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_exonerados_c,IVA exonerados (C),purchase,0,percent,Impuesto al Valor Agregado (C),IVA exonerado,cr_tax_group_exonerados,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_exonerados_c,IVA exonerados (C),purchase,0,percent,Impuesto al Valor Agregado (C),IVA exonerado,l10n_cr_custom_18_v2.cr_tax_group_exonerados,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_iva_no_sujetos_c,IVA no sujetos (C),purchase,0,percent,Impuesto al Valor Agregado (C),IVA no sujeto,cr_tax_group_no_sujetos,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_iva_no_sujetos_c,IVA no sujetos (C),purchase,0,percent,Impuesto al Valor Agregado (C),IVA no sujeto,l10n_cr_custom_18_v2.cr_tax_group_no_sujetos,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_gasto_corriene,Gasto corriene,purchase,0,percent,Impuesto al Valor Agregado (C),No acreditable,cr_tax_group_gasto_corriente_sin_derecho_a_credito,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_gasto_corriene,Gasto corriene,purchase,0,percent,Impuesto al Valor Agregado (C),No acreditable,l10n_cr_custom_18_v2.cr_tax_group_gasto_corriente_sin_derecho_a_credito,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
-cr_tax_otros,Otros,purchase,0,percent,Impuesto al Valor Agregado (C),Otros,cr_tax_group_otros,base,invoice,
-,,,,,,,,tax,invoice,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+cr_tax_otros,Otros,purchase,0,percent,Impuesto al Valor Agregado (C),Otros,l10n_cr_custom_18_v2.cr_tax_group_otros,base,invoice,
+,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_1071101
 ,,,,,,,,base,refund,
-,,,,,,,,tax,refund,cr_coa_1071101
+,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
