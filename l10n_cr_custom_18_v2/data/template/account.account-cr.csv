@@ -132,4 +132,4 @@ cr_coa_999001,Ganancia por diferencia de efectivo,9999001,income_other,False,Fal
 cr_coa_999002,Pérdida por diferencia de efectivo,9999002,expense_other,False,False
 cr_coa_999997,Ganancia por descuento por pronto pago,9999997,income_other,False,False
 cr_coa_999998,Pérdida por descuento por pronto pago,9999998,expense_other,False,False
-cr_coa_999999,Ganancias/pérdidas no distribuidas,9999999,equity_unaffected,False,False
+cr_coa_999999,Ganancias/pérdidas no distribuidas,9999999,equity,False,False
