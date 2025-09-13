@@ -1,4 +1,4 @@
-id,name,type_tax_use,amount,amount_type,description,invoice_label,tax_group_id/id,repartition_line_ids/repartition_type,repartition_line_ids/document_type,repartition_line_ids/account_id
+id,name,type_tax_use,amount,amount_type,description,invoice_label,tax_group_id/id,repartition_line_ids/repartition_type,repartition_line_ids/document_type,repartition_line_ids/account_id/id
 cr_tax_iva_13_servicios_v,IVA 13% servicios (V),sale,13,percent,Impuesto al Valor Agregado (V),IVA 13% servicio,l10n_cr_custom_18_v2.cr_tax_group_tarifa_general_13,base,invoice,
 ,,,,,,,,tax,invoice,l10n_cr_custom_18_v2.cr_coa_2020101
 ,,,,,,,,base,refund,
@@ -100,3 +100,4 @@ cr_tax_otros,Otros,purchase,0,percent,Impuesto al Valor Agregado (C),Otros,l10n_
 ,,,,,,,,base,refund,
 
 ,,,,,,,,tax,refund,l10n_cr_custom_18_v2.cr_coa_1071101
+
