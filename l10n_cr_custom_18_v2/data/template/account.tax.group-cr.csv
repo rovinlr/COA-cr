@@ -1,12 +1,12 @@
 id,name,tax_payable_account_id,tax_receivable_account_id
-cr_tax_group_tarifa_reducida_1,Tarifa reducida 1%,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_tarifa_reducida_2,Tarifa reducida 2%,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_tarifa_reducida_4,Tarifa reducida 4%,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_tarifa_reducida_8,Tarifa reducida 8%,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_tarifa_general_13,Tarifa general 13%,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_exentos,Exentos,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_no_sujetos,No sujetos,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_exonerados,Exonerados,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_gasto_corriente_sin_derecho_a_credito,Gasto corriente (sin derecho a credito),cr_coa_2020101,cr_coa_1071101
-cr_tax_group_bienes_de_capital,Bienes de capital,cr_coa_2020101,cr_coa_1071101
-cr_tax_group_otros,Otros,cr_coa_2020101,cr_coa_1071101
+cr_tax_group_tarifa_reducida_1,Tarifa reducida 1%,,
+cr_tax_group_tarifa_reducida_2,Tarifa reducida 2%,,
+cr_tax_group_tarifa_reducida_4,Tarifa reducida 4%,,
+cr_tax_group_tarifa_reducida_8,Tarifa reducida 8%,,
+cr_tax_group_tarifa_general_13,Tarifa general 13%,,
+cr_tax_group_exentos,Exentos,,
+cr_tax_group_no_sujetos,No sujetos,,
+cr_tax_group_exonerados,Exonerados,,
+cr_tax_group_gasto_corriente_sin_derecho_a_credito,Gasto corriente (sin derecho a credito),,
+cr_tax_group_bienes_de_capital,Bienes de capital,,
+cr_tax_group_otros,Otros,,
