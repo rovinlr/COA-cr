@@ -10,6 +10,8 @@
     "license": "LGPL-3",
     "depends": ["account"],
     "data": [
+       "data/account_chart_template_data.xml",
+       "data/account_chart_template_configure_data.xml",
        "data/template/account.account-cr.csv",
         "data/template/account.group-cr.csv",
         "data/template/account.tax.group-cr.csv",
