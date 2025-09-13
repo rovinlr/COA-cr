@@ -3,6 +3,10 @@
     "summary": "Paquete de localización CR basado en el formato de Odoo 18 (plantillas).",
     "version": "18.0.1.0.0",
     "category": "Accounting/Localizations/Account Charts",
+    'countries': ['cr'],
+    'url': 'https://github.com/rovinlr/OCA-cr/tree/main/l10n_cr_custom_18_v2',
+    'author': 'FenixCR Solutions - Rodrigo Lopez R',
+    'website': 'https://www.fenixcrsolutions.com',
     "license": "LGPL-3",
     "depends": ["account"],
     "data": [

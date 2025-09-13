@@ -120,16 +120,16 @@ cr_coa_5315101,Patentes e impuestos,5315101,expense,False,False
 cr_coa_5316101,Uniformes,5316101,expense,False,False
 cr_coa_5317101,Suministros de aseo,5317101,expense,False,False
 cr_coa_5318101,Otros gastos administrativos,5318101,expense,False,False
-cr_coa_5410101,Gastos por intereses,5410101,expense_other,False,False
-cr_coa_5410201,Gastos por comisiones bancarias,5410201,expense_other,False,False
-cr_coa_5410301,Perdidas por diferencias de cambio,5410301,expense_other,False,False
-cr_coa_5510101,Gastos por donaciones deducibles,5510101,expense_other,False,False
-cr_coa_5610101,Gastos por perdidas de inventarios,5610101,expense_other,False,False
-cr_coa_5710101,Gastos por multas,5710101,expense_other,False,False
+cr_coa_5410101,Gastos por intereses,5410101,expense_depreciation,False,False
+cr_coa_5410201,Gastos por comisiones bancarias,5410201,expense_depreciation,False,False
+cr_coa_5410301,Perdidas por diferencias de cambio,5410301,expense_depreciation,False,False
+cr_coa_5510101,Gastos por donaciones deducibles,5510101,expense_depreciation,False,False
+cr_coa_5610101,Gastos por perdidas de inventarios,5610101,expense_depreciation,False,False
+cr_coa_5710101,Gastos por multas,5710101,expense_depreciation,False,False
 cr_coa_5810101,Depreciación del activo fijo,5810101,expense_depreciation,False,False
-cr_coa_6010101,Gastos no deducibles,6010101,expense_other,False,False
+cr_coa_6010101,Gastos no deducibles,6010101,expense_depreciation,False,False
 cr_coa_999001,Ganancia por diferencia de efectivo,9999001,income_other,False,False
-cr_coa_999002,Pérdida por diferencia de efectivo,9999002,expense_other,False,False
+cr_coa_999002,Pérdida por diferencia de efectivo,9999002,expense_depreciation,False,False
 cr_coa_999997,Ganancia por descuento por pronto pago,9999997,income_other,False,False
-cr_coa_999998,Pérdida por descuento por pronto pago,9999998,expense_other,False,False
+cr_coa_999998,Pérdida por descuento por pronto pago,9999998,expense_depreciation,False,False
 cr_coa_999999,Ganancias/pérdidas no distribuidas,9999999,equity,False,False

@@ -1,42 +1,22 @@
 id,code_prefix_start,code_prefix_end,name
-cr_group_101,1010000,1019999,Grupo 101 - Banco y efectivo
-cr_group_102,1020000,1029999,Grupo 102 - Activos Circulantes
-cr_group_103,1030000,1039999,Grupo 103 - Activos Circulantes
-cr_group_104,1040000,1049999,Grupo 104 - Por cobrar
-cr_group_105,1050000,1059999,Grupo 105 - Activos Circulantes
-cr_group_106,1060000,1069999,Grupo 106 - Activos Circulantes
-cr_group_107,1070000,1079999,Grupo 107 - Activos Circulantes
-cr_group_111,1110000,1119999,Grupo 111 - Activos Fijos
-cr_group_112,1120000,1129999,Grupo 112 - Activos Fijos
-cr_group_113,1130000,1139999,Grupo 113 - Activos Fijos
-cr_group_114,1140000,1149999,Grupo 114 - Activos Fijos
-cr_group_115,1150000,1159999,Grupo 115 - Activos Fijos
-cr_group_116,1160000,1169999,Grupo 116 - Activos Fijos
-cr_group_117,1170000,1179999,Grupo 117 - Activos Fijos
-cr_group_118,1180000,1189999,Grupo 118 - Activos Fijos
-cr_group_121,1210000,1219999,Grupo 121 - Activos no-circulantes
-cr_group_131,1310000,1319999,Grupo 131 - Activos no-circulantes
-cr_group_141,1410000,1419999,Grupo 141 - Activos no-circulantes
-cr_group_201,2010000,2019999,Grupo 201 - Por pagar
-cr_group_202,2020000,2029999,Grupo 202 - Pasivos Circulantes
-cr_group_203,2030000,2039999,Grupo 203 - Pasivos Circulantes
-cr_group_211,2110000,2119999,Grupo 211 - Pasivos no-circulantes
-cr_group_301,3010000,3019999,Grupo 301 - Capital
-cr_group_302,3020000,3029999,Grupo 302 - Capital
-cr_group_303,3030000,3039999,Grupo 303 - Capital
-cr_group_304,3040000,3049999,Grupo 304 - Capital
-cr_group_411,4110000,4119999,Grupo 411 - Ingreso
-cr_group_421,4210000,4219999,Grupo 421 - Otro Ingreso
-cr_group_431,4310000,4319999,Grupo 431 - Otro Ingreso
-cr_group_441,4410000,4419999,Grupo 441 - Otro Ingreso
-cr_group_451,4510000,4519999,Grupo 451 - Otro Ingreso
-cr_group_511,5110000,5119999,Grupo 511 - Costo de ingresos
-cr_group_521,5210000,5219999,Grupo 521 - Gastos
-cr_group_531,5310000,5319999,Grupo 531 - Gastos
-cr_group_541,5410000,5419999,Grupo 541 - Otros gastos
-cr_group_551,5510000,5519999,Grupo 551 - Otros gastos
-cr_group_561,5610000,5619999,Grupo 561 - Otros gastos
-cr_group_571,5710000,5719999,Grupo 571 - Otros gastos
-cr_group_581,5810000,5819999,Grupo 581 - Depreciación
-cr_group_601,6010000,6019999,Grupo 601 - Otros gastos
-cr_group_999,999000,999999,Grupo 999 - Otro Ingreso
+cr_group_1,1010000,1039999,Banco y efectivo
+cr_group_2,1040000,1049999,Cuentas por cobrar
+cr_group_3,1050000,1059999,Inventarios
+cr_group_4,1060000,1069999,Pagados por anticipado
+cr_group_5,1070000,1079999,Otros activos corrientes
+cr_group_6,1110000,1189999,Activos Fijos
+cr_group_7,1210000,1419999,Activos no corrientes
+cr_group_8,2010000,2019999,Cuentas Por pagar
+cr_group_9,2020000,2039999,Otros Pasivos Circulantes
+cr_group_10,2110000,2119999,Pasivos no-circulantes
+cr_group_11,3010000,3049999,Patrimonio
+cr_group_12,4110000,4119999,Ingresos
+cr_group_13,4210000,4519999,Otros ingresos
+cr_group_14,5110000,5119999,Costo de ingresos
+cr_group_15,5210000,5319999,Gastos operativos
+cr_group_16,5410000,5419999,Gastos financieros
+cr_group_17,5510000,5519999,Otros gastos deducibles
+cr_group_18,5610000,5719999,Ajustes del periodo
+cr_group_19,5810000,5819999,Depreciación
+cr_group_20,6010000,6019999,Gastos no deducibles
+cr_group_999,999000,999999,Cuentas de orden
