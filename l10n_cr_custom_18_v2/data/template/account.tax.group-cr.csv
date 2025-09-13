@@ -8,5 +8,5 @@ cr_tax_group_exentos,Exentos,cr_coa_2020101,cr_coa_1071101
 cr_tax_group_no_sujetos,No sujetos,cr_coa_2020101,cr_coa_1071101
 cr_tax_group_exonerados,Exonerados,cr_coa_2020101,cr_coa_1071101
 cr_tax_group_gasto_corriente_sin_derecho_a_credito,Gasto corriente (sin derecho a credito),cr_coa_2020101,cr_coa_1071101
-cr_tax_group_bienes_de_capital,Bienes de capital,base.cr,cr_coa_2020101,cr_coa_1071101
+cr_tax_group_bienes_de_capital,Bienes de capital,cr_coa_2020101,cr_coa_1071101
 cr_tax_group_otros,Otros,cr_coa_2020101,cr_coa_1071101
