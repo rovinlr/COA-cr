@@ -1,10 +1,10 @@
 id,name,code,account_type,reconcile,non_trade
 cr_coa_1010101,Efectivo,1010101,asset_cash,False,False
 cr_coa_1010201,Caja chica,1010201,asset_cash,False,False
-cr_coa_1010301,Cuenta bancaria 1,1010301,asset_cash,False,False
-cr_coa_1010302,Cuenta bancaria 2,1010302,asset_cash,False,False
-cr_coa_1010303,Cuenta bancaria 3,1010303,asset_cash,False,False
-cr_coa_1010304,Cuenta bancaria 4,1010304,asset_cash,False,False
+cr_coa_1010301,Cuenta bancaria BNCR,1010301,asset_cash,False,False
+cr_coa_1010302,Cuenta bancaria BCR,1010302,asset_cash,False,False
+cr_coa_1010303,Cuenta bancaria BAC,1010303,asset_cash,False,False
+cr_coa_1010304,Cuenta bancaria BPDC,1010304,asset_cash,False,False
 cr_coa_1010401,Otras cuentas electronicas,1010401,asset_cash,False,False
 cr_coa_1020101,Fondos en tránsito en tesorería,1020101,asset_current,False,False
 cr_coa_1020201,Fondos en tránsito Datáfonos,1020201,asset_current,False,False
@@ -132,4 +132,5 @@ cr_coa_999001,Ganancia por diferencia de efectivo,9999001,income_other,False,Fal
 cr_coa_999002,Pérdida por diferencia de efectivo,9999002,expense_depreciation,False,False
 cr_coa_999997,Ganancia por descuento por pronto pago,9999997,income_other,False,False
 cr_coa_999998,Pérdida por descuento por pronto pago,9999998,expense_depreciation,False,False
+
 cr_coa_999999,Ganancias/pérdidas no distribuidas,9999999,equity,False,False
