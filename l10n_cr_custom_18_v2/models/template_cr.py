@@ -6,7 +6,7 @@ class L10nCRTemplate(models.AbstractModel):
     _inherit = 'account.chart.template'
 
     @template('cr_custom')
-    def _get_cr_template_data(self):
+    def _get_cr_custom_template_data(self):
         # Minimal template data; code_digits set to 7 based on provided CoA
         return {
             'name': _('Costa Rica - Custom'),
@@ -17,7 +17,7 @@ class L10nCRTemplate(models.AbstractModel):
         }
 
     @template('cr_custom', 'res.company')
-    def _get_cr_res_company(self):
+    def _get_cr_custom_res_company(self):
         return {
             self.env.company.id: {
                 'account_fiscal_country_id': 'base.cr',
