@@ -14,8 +14,7 @@
         "data/template/account.group-cr.csv",
         "data/template/account.tax.group-cr.csv",
         "data/template/account.tax-cr.csv",
-        "data/template/account.fiscal.position-cr.csv",
-        "data/account_chart_template_configure_data.xml"
+        "data/template/account.fiscal.position-cr.csv"
     ],
     "demo": [],
     "installable": True,
