@@ -8,44 +8,36 @@
                     <p>
                         <span t-esc="company.name"/>
                     </p>
-                    <t t-if="sale_moves">
+                    <t t-if="sale_summary">
                         <h3>Ventas</h3>
                         <table class="table table-sm o_main_table">
                             <thead>
                                 <tr>
-                                    <th>Documento</th>
-                                    <th>Cliente</th>
-                                    <th>Fecha</th>
+                                    <th>Impuesto</th>
                                     <th class="text-right">Base</th>
-                                    <th class="text-right">Impuestos</th>
+                                    <th class="text-right">Impuesto</th>
                                     <th class="text-right">Total</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr t-foreach="sale_moves" t-as="move">
+                                <tr t-foreach="sale_summary" t-as="line">
                                     <td>
-                                        <span t-esc="move.name or move.ref"/>
-                                    </td>
-                                    <td>
-                                        <span t-esc="move.partner_id.display_name"/>
-                                    </td>
-                                    <td>
-                                        <span t-esc="format_date(move.invoice_date or move.date)"/>
+                                        <span t-esc="line['tax_name']"/>
                                     </td>
                                     <td class="text-right">
-                                        <span t-esc="formatLang(move.amount_untaxed, currency_obj=move.currency_id)"/>
+                                        <span t-esc="formatLang(line['base'], currency_obj=company_currency)"/>
                                     </td>
                                     <td class="text-right">
-                                        <span t-esc="formatLang(move.amount_tax, currency_obj=move.currency_id)"/>
+                                        <span t-esc="formatLang(line['tax'], currency_obj=company_currency)"/>
                                     </td>
                                     <td class="text-right">
-                                        <span t-esc="formatLang(move.amount_total, currency_obj=move.currency_id)"/>
+                                        <span t-esc="formatLang(line['total'], currency_obj=company_currency)"/>
                                     </td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th colspan="3" class="text-right">Totales</th>
+                                    <th class="text-right">Totales</th>
                                     <th class="text-right">
                                         <span t-esc="formatLang(sale_totals['base'], currency_obj=company_currency)"/>
                                     </th>
@@ -59,44 +51,36 @@
                             </tfoot>
                         </table>
                     </t>
-                    <t t-if="purchase_moves">
+                    <t t-if="purchase_summary">
                         <h3>Compras</h3>
                         <table class="table table-sm o_main_table">
                             <thead>
                                 <tr>
-                                    <th>Documento</th>
-                                    <th>Proveedor</th>
-                                    <th>Fecha</th>
+                                    <th>Impuesto</th>
                                     <th class="text-right">Base</th>
-                                    <th class="text-right">Impuestos</th>
+                                    <th class="text-right">Impuesto</th>
                                     <th class="text-right">Total</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr t-foreach="purchase_moves" t-as="move">
+                                <tr t-foreach="purchase_summary" t-as="line">
                                     <td>
-                                        <span t-esc="move.name or move.ref"/>
-                                    </td>
-                                    <td>
-                                        <span t-esc="move.partner_id.display_name"/>
-                                    </td>
-                                    <td>
-                                        <span t-esc="format_date(move.invoice_date or move.date)"/>
+                                        <span t-esc="line['tax_name']"/>
                                     </td>
                                     <td class="text-right">
-                                        <span t-esc="formatLang(move.amount_untaxed, currency_obj=move.currency_id)"/>
+                                        <span t-esc="formatLang(line['base'], currency_obj=company_currency)"/>
                                     </td>
                                     <td class="text-right">
-                                        <span t-esc="formatLang(move.amount_tax, currency_obj=move.currency_id)"/>
+                                        <span t-esc="formatLang(line['tax'], currency_obj=company_currency)"/>
                                     </td>
                                     <td class="text-right">
-                                        <span t-esc="formatLang(move.amount_total, currency_obj=move.currency_id)"/>
+                                        <span t-esc="formatLang(line['total'], currency_obj=company_currency)"/>
                                     </td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th colspan="3" class="text-right">Totales</th>
+                                    <th class="text-right">Totales</th>
                                     <th class="text-right">
                                         <span t-esc="formatLang(purchase_totals['base'], currency_obj=company_currency)"/>
                                     </th>
@@ -110,8 +94,87 @@
                             </tfoot>
                         </table>
                     </t>
-                    <t t-if="not sale_moves and not purchase_moves">
-                        <p>No se encontraron movimientos de ventas o compras para los registros seleccionados.</p>
+                    <t t-if="not sale_summary and not purchase_summary">
+                        <p>No se encontraron impuestos generados para los registros seleccionados.</p>
+                    </t>
+                    <t t-if="show_details and (sale_details or purchase_details)">
+                        <div class="mt16">
+                            <h3>Detalle por documento</h3>
+                        </div>
+                        <t t-if="sale_details">
+                            <h4>Ventas</h4>
+                            <table class="table table-sm o_main_table">
+                                <thead>
+                                    <tr>
+                                        <th>Documento</th>
+                                        <th>Fecha</th>
+                                        <th>Impuesto</th>
+                                        <th class="text-right">Base</th>
+                                        <th class="text-right">Impuesto</th>
+                                        <th class="text-right">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="sale_details" t-as="detail">
+                                        <td>
+                                            <span t-esc="detail['document']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="format_date(detail['date'])"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="detail['tax_name']"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="formatLang(detail['base'], currency_obj=company_currency)"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="formatLang(detail['tax'], currency_obj=company_currency)"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="formatLang(detail['total'], currency_obj=company_currency)"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+                        <t t-if="purchase_details">
+                            <h4>Compras</h4>
+                            <table class="table table-sm o_main_table">
+                                <thead>
+                                    <tr>
+                                        <th>Documento</th>
+                                        <th>Fecha</th>
+                                        <th>Impuesto</th>
+                                        <th class="text-right">Base</th>
+                                        <th class="text-right">Impuesto</th>
+                                        <th class="text-right">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="purchase_details" t-as="detail">
+                                        <td>
+                                            <span t-esc="detail['document']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="format_date(detail['date'])"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="detail['tax_name']"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="formatLang(detail['base'], currency_obj=company_currency)"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="formatLang(detail['tax'], currency_obj=company_currency)"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="formatLang(detail['total'], currency_obj=company_currency)"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
                     </t>
                     <div class="mt16">
                         <strong>Total general</strong>
