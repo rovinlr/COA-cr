@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report
+        id="action_report_sales_purchase"
+        model="account.move"
+        string="Reporte de Compras y Ventas"
+        report_type="qweb-pdf"
+        name="l10n_cr_custom_18_v2.report_sales_purchase"
+        file="l10n_cr_custom_18_v2.report_sales_purchase"
+        print_report_name="'Reporte_Compras_Ventas_' + (object.name or '')"
+        binding_model_id="account.model_account_move"
+        binding_type="report"
+    />
+</odoo>

@@ -14,7 +14,11 @@
         "data/template/account.group-cr.csv",
         "data/template/account.tax.group-cr.csv",
         "data/template/account.tax-cr.csv",
-        "data/template/account.fiscal.position-cr.csv"
+        "data/template/account.fiscal.position-cr.csv",
+        "report/report_sales_purchase.xml"
+    ],
+    "qweb": [
+        "report/report_sales_purchase_templates.xml"
     ],
     "demo": [],
     "installable": True,
