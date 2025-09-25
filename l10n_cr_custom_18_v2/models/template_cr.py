@@ -21,5 +21,15 @@ class L10nCRTemplate(models.AbstractModel):
         return {
             self.env.company.id: {
                 'account_fiscal_country_id': 'base.cr',
+                'bank_account_code_prefix': '1010101',
+                'cash_account_code_prefix': '1010301',
+                'transfer_account_code_prefix': '1020401',
+                'account_default_pos_receivable_account_id': 'cr_coa_1040201',
+                'income_currency_exchange_account_id': 'cr_coa_4410101',
+                'expense_currency_exchange_account_id': 'cr_coa_5410301',
+                'account_sale_tax_id': 'cr_tax_iva_13_bienes_v_sale',
+                'account_purchase_tax_id': 'cr_tax_iva_13_bienes_c_purchase',
+                'income_account_id': 'cr_coa_4110101',
+                'expense_account_id': 'cr_coa_5110101',
             }
         }
