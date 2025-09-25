@@ -4,7 +4,7 @@
     "version": "19.0.1.0.0",
     "category": "Accounting/Localizations/Account Charts",
     'countries': ['cr'],
-    'url': 'https://github.com/rovinlr/OCA-cr/tree/main/l10n_cr_custom_19_v2',
+    'url': 'https://github.com/rovinlr/OCA-cr/tree/main/l10n_cr_custom_19_v1',
     'author': 'FenixCR Solutions - Rodrigo Lopez R',
     'website': 'https://www.fenixcrsolutions.com',
     "license": "LGPL-3",

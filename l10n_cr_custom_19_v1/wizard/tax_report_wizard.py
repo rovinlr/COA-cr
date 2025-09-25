@@ -51,9 +51,9 @@ class TaxReportWizard(models.TransientModel):
     def _run_report(self, detailed=False):
         self.ensure_one()
         moves = self._get_moves()
-        action_xmlid = 'l10n_cr_custom_18_v2.action_report_sales_purchase'
+        action_xmlid = 'l10n_cr_custom_19_v1.action_report_sales_purchase'
         if detailed:
-            action_xmlid = 'l10n_cr_custom_18_v2.action_report_sales_purchase_detail'
+            action_xmlid = 'l10n_cr_custom_19_v1.action_report_sales_purchase_detail'
         action = self.env.ref(action_xmlid)
         context = dict(self.env.context)
         context.update({'report_detail': detailed})
