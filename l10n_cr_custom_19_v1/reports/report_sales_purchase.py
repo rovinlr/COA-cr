@@ -4,7 +4,7 @@ from odoo import fields, models
 
 
 class ReportSalesPurchase(models.AbstractModel):
-    _name = 'report.l10n_cr_custom_18_v2.report_sales_purchase'
+    _name = 'report.l10n_cr_custom_19_v1.report_sales_purchase'
     _description = 'Reporte de Compras y Ventas'
 
     def _get_report_values(self, docids, data=None):
@@ -108,8 +108,8 @@ class ReportSalesPurchase(models.AbstractModel):
 
 
 class ReportSalesPurchaseDetail(models.AbstractModel):
-    _name = 'report.l10n_cr_custom_18_v2.report_sales_purchase_detail'
-    _inherit = 'report.l10n_cr_custom_18_v2.report_sales_purchase'
+    _name = 'report.l10n_cr_custom_19_v1.report_sales_purchase_detail'
+    _inherit = 'report.l10n_cr_custom_19_v1.report_sales_purchase'
 
     def _get_report_values(self, docids, data=None):
         data = dict(data or {})
