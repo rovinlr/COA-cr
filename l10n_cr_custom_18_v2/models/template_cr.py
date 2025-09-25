@@ -21,7 +21,7 @@ class L10nCRTemplate(models.AbstractModel):
             'default_sale_journal_id': 'cr_custom_sale_journal',
             'default_purchase_journal_id': 'cr_custom_purchase_journal',
 
-        }
+        },
 
     @template('cr_custom', 'account.journal')
     def _get_cr_custom_account_journals(self):
