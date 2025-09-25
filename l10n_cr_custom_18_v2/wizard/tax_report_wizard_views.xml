@@ -29,5 +29,11 @@
         <field name="target">new</field>
     </record>
 
-    <menuitem id="menu_tax_report_root" name="Reporte de Compras y Ventas" parent="account.menu_finance_reports" action="action_tax_report_wizard" sequence="75"/>
+    <menuitem
+        id="menu_tax_report_root"
+        name="Reporte de Compras y Ventas"
+        parent="account.menu_finance_reports"
+        action="action_tax_report_wizard"
+        sequence="75"
+    />
 </odoo>
