@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_tax_report_wizard_form" model="ir.ui.view">
+        <field name="name">l10n.cr.tax.report.wizard.form</field>
+        <field name="model">l10n.cr.tax.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reporte de Compras y Ventas">
+                <group>
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="target_move" widget="radio"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_print_detail" type="object" class="btn-primary" string="Imprimir detallado"/>
+                    <button name="action_print_summary" type="object" class="btn-secondary" string="Imprimir resumen"/>
+                    <button special="cancel" class="btn-link" string="Cancelar"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_tax_report_wizard" model="ir.actions.act_window">
+        <field name="name">Reporte de Compras y Ventas</field>
+        <field name="res_model">l10n.cr.tax.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_tax_report_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_tax_report_root" name="Reporte de Compras y Ventas" parent="account.menu_finance_reports" action="action_tax_report_wizard" sequence="75"/>
+</odoo>
