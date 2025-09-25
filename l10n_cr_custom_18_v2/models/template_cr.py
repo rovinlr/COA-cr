@@ -14,11 +14,13 @@ class L10nCRTemplate(models.AbstractModel):
                 'visible': True,
                 'code_digits': '7',
                 'country_id': 'base.cr',
+
             },
             'property_account_receivable_id': 'cr_coa_1040101',
             'property_account_payable_id': 'cr_coa_2010101',
             'default_sale_journal_id': 'cr_custom_sale_journal',
             'default_purchase_journal_id': 'cr_custom_purchase_journal',
+
         }
 
     @template('cr_custom', 'account.journal')
