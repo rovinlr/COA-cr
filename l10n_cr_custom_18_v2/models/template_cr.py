@@ -12,8 +12,9 @@ class L10nCRTemplate(models.AbstractModel):
             'name': _('Costa Rica - Custom'),
             'visible': True,
             'code_digits': '7',
+            'country_id': 'base.cr',
             'property_account_receivable_id': 'cr_coa_1040101',
-            'property_account_payable_id': 'cr_coa_2010101', 
+            'property_account_payable_id': 'cr_coa_2010101',
         }
 
     @template('cr_custom', 'res.company')
