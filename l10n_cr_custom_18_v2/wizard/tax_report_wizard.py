@@ -57,7 +57,8 @@ class TaxReportWizard(models.TransientModel):
         action = self.env.ref(action_xmlid)
         context = dict(self.env.context)
         context.update({'report_detail': detailed})
-        return action.with_context(context).report_action(moves)
+        data = {'report_detail': detailed}
+        return action.with_context(context).report_action(moves, data=data)
 
     def action_print_summary(self):
         return self._run_report(detailed=False)
