@@ -105,3 +105,13 @@ class ReportSalesPurchase(models.AbstractModel):
             'company': company,
             'company_currency': company_currency,
         }
+
+
+class ReportSalesPurchaseDetail(models.AbstractModel):
+    _name = 'report.l10n_cr_custom_18_v2.report_sales_purchase_detail'
+    _inherit = 'report.l10n_cr_custom_18_v2.report_sales_purchase'
+
+    def _get_report_values(self, docids, data=None):
+        data = dict(data or {})
+        data['report_detail'] = True
+        return super()._get_report_values(docids, data=data)
