@@ -23,7 +23,7 @@ class L10nCRTemplate(models.AbstractModel):
     def _get_cr_custom_account_journals(self):
         return {
             'cr_custom_sale_journal': {
-                'name': _('Sales Journal CR'),
+                'name': _('Ventas CR'),
                 'type': 'sale',
                 'code': 'VCR',
                 'default_account_id': 'cr_coa_4110101',
@@ -31,7 +31,7 @@ class L10nCRTemplate(models.AbstractModel):
                 'payment_credit_account_id': 'cr_coa_1020501',
             },
             'cr_custom_purchase_journal': {
-                'name': _('Purchase Journal CR'),
+                'name': _('Compras CR'),
                 'type': 'purchase',
                 'code': 'PCR',
                 'default_account_id': 'cr_coa_5110101',
@@ -39,7 +39,7 @@ class L10nCRTemplate(models.AbstractModel):
                 'payment_credit_account_id': 'cr_coa_1020601',
             },
             'cr_custom_currency_exchange_journal': {
-                'name': _('Currency Exchange Differences'),
+                'name': _('Diferencias de cambio'),
                 'type': 'general',
                 'code': 'EXC',
                 'default_account_id': 'cr_coa_4410101',
@@ -47,7 +47,7 @@ class L10nCRTemplate(models.AbstractModel):
                 'default_credit_account_id': 'cr_coa_4410101',
             },
             'cr_custom_tax_closing_journal': {
-                'name': _('Tax Closing Journal'),
+                'name': _('Cierre de impuestos'),
                 'type': 'general',
                 'code': 'TAX',
                 'default_account_id': 'cr_coa_2020201',
