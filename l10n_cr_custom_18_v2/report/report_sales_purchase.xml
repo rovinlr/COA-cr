@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+
+    <data>
+        <report
+            id="action_report_sales_purchase"
+            model="account.move"
+            string="Reporte de Compras y Ventas"
+            report_type="qweb-pdf"
+            name="l10n_cr_custom_18_v2.report_sales_purchase"
+            file="l10n_cr_custom_18_v2.report_sales_purchase"
+            print_report_name="'Reporte_Compras_Ventas_' + (object.name or '')"
+            binding_model_id="account.model_account_move"
+            binding_type="report"
+        />
+        <report
+            id="action_report_sales_purchase_detail"
+            model="account.move"
+            string="Reporte de Compras y Ventas (Detallado)"
+            report_type="qweb-pdf"
+            name="l10n_cr_custom_18_v2.report_sales_purchase"
+            file="l10n_cr_custom_18_v2.report_sales_purchase"
+            print_report_name="'Reporte_Compras_Ventas_Detallado_' + (object.name or '')"
+            binding_model_id="account.model_account_move"
+            binding_type="report"
+            context="{'report_detail': True}"
+        />
+    </data>
+
     <report
         id="action_report_sales_purchase"
         model="account.move"
@@ -23,4 +50,5 @@
         binding_type="report"
         context="{'report_detail': True}"
     />
+
 </odoo>
