@@ -15,6 +15,45 @@ class L10nCRTemplate(models.AbstractModel):
             'country_id': 'base.cr',
             'property_account_receivable_id': 'cr_coa_1040101',
             'property_account_payable_id': 'cr_coa_2010101',
+            'default_sale_journal_id': 'cr_custom_sale_journal',
+            'default_purchase_journal_id': 'cr_custom_purchase_journal',
+        }
+
+    @template('cr_custom', 'account.journal')
+    def _get_cr_custom_account_journals(self):
+        return {
+            'cr_custom_sale_journal': {
+                'name': _('Sales Journal CR'),
+                'type': 'sale',
+                'code': 'VCR',
+                'default_account_id': 'cr_coa_4110101',
+                'payment_debit_account_id': 'cr_coa_1020501',
+                'payment_credit_account_id': 'cr_coa_1020501',
+            },
+            'cr_custom_purchase_journal': {
+                'name': _('Purchase Journal CR'),
+                'type': 'purchase',
+                'code': 'PCR',
+                'default_account_id': 'cr_coa_5110101',
+                'payment_debit_account_id': 'cr_coa_1020601',
+                'payment_credit_account_id': 'cr_coa_1020601',
+            },
+            'cr_custom_currency_exchange_journal': {
+                'name': _('Currency Exchange Differences'),
+                'type': 'general',
+                'code': 'EXC',
+                'default_account_id': 'cr_coa_4410101',
+                'default_debit_account_id': 'cr_coa_5410301',
+                'default_credit_account_id': 'cr_coa_4410101',
+            },
+            'cr_custom_tax_closing_journal': {
+                'name': _('Tax Closing Journal'),
+                'type': 'general',
+                'code': 'TAX',
+                'default_account_id': 'cr_coa_2020201',
+                'default_debit_account_id': 'cr_coa_2020201',
+                'default_credit_account_id': 'cr_coa_2020201',
+            },
         }
 
     @template('cr_custom', 'res.company')
