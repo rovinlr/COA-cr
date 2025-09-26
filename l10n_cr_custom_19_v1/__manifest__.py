@@ -10,11 +10,6 @@
     "license": "LGPL-3",
     "depends": [
         "account",
-        "contacts",
-        "uom",
-        "account_reports",
-        "l10n_latam_base",
-        "l10n_latam_invoice_document",
     ],
     "data": [
         "data/account_chart_template_data.xml",
