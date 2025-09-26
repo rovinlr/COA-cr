@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="tag_vat_sale" model="account.account.tag">
+            <field name="name">IVA Ventas</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.cr"/>
+        </record>
+        <record id="tag_vat_sale_refund" model="account.account.tag">
+            <field name="name">IVA Ventas (NC)</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.cr"/>
+        </record>
+        <record id="tag_vat_purchase" model="account.account.tag">
+            <field name="name">IVA Compras</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.cr"/>
+        </record>
+        <record id="tag_vat_purchase_refund" model="account.account.tag">
+            <field name="name">IVA Compras (NC)</field>
+            <field name="applicability">taxes</field>
+            <field name="country_id" ref="base.cr"/>
+        </record>
+    </data>
+</odoo>
