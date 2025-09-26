@@ -14,6 +14,7 @@ class L10nCRTemplate(models.AbstractModel):
                 'visible': True,
                 'code_digits': '7',
                 'country_id': 'base.cr',
+                'chart_template_ref': 'cr_custom',
 
             },
             'property_account_receivable_id': 'cr_coa_1040101',
