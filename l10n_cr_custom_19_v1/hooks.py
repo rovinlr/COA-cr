@@ -6,6 +6,10 @@ def _ensure_chart_template(env):
     if not registry_model:
         return
 
+    env.cr.execute("SELECT to_regclass('account_chart_template')")
+    if not env.cr.fetchone()[0]:
+        return
+
     template_model = env['account.chart.template']
     template = env.ref('l10n_cr_custom_19_v1.cr_custom', raise_if_not_found=False)
 
