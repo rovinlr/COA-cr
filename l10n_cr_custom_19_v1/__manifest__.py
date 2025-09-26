@@ -10,6 +10,7 @@
     "license": "LGPL-3",
     "depends": [
         "account",
+        "account_accountant",
     ],
     "data": [
         "data/account_chart_template_data.xml",
