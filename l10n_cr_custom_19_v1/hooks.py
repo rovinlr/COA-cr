@@ -35,6 +35,12 @@ def _ensure_chart_template(env):
         template.write({'chart_template_ref': template.id})
 
 
-def post_init_hook(cr, registry):
-    env = api.Environment(cr, SUPERUSER_ID, {})
+def post_init_hook(env_or_cr, registry=None):
+    """Ensure compatibility with both env and cr signatures."""
+
+    if isinstance(env_or_cr, api.Environment):
+        env = env_or_cr
+    else:
+        env = api.Environment(env_or_cr, SUPERUSER_ID, {})
+
     _ensure_chart_template(env)
