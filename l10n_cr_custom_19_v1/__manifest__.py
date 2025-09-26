@@ -11,6 +11,9 @@
     "depends": [
         "account",
         "account_accountant",
+        "l10n_cr",
+        "l10n_latam_base",
+        "l10n_latam_invoice_document",
     ],
     "data": [
         "data/account_tax_tags.xml",
