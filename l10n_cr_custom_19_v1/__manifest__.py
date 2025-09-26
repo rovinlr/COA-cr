@@ -17,6 +17,7 @@
         "l10n_latam_invoice_document",
     ],
     "data": [
+        "data/account_chart_template_data.xml",
         "data/account_tax_tags.xml",
         "report/report_sales_purchase.xml",
         "report/report_sales_purchase_templates.xml",

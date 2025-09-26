@@ -81,7 +81,8 @@ class L10nCRTemplate(models.AbstractModel):
             'template_data': {
                 'name': _('Costa Rica - Custom'),
                 'visible': True,
-                'code_digits': '7',
+                'code_digits': 7,
+                'complete_tax_set': True,
                 'country_id': 'base.cr',
                 'chart_template_ref': 'l10n_cr_custom_19_v1.cr_custom',
 
