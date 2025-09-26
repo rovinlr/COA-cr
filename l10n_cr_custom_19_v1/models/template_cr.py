@@ -2,6 +2,7 @@ import csv
 
 from odoo import models, _
 from odoo.addons.account.models.chart_template import template
+
 try:
     from odoo.modules.module import get_module_resource
 except ImportError:  # Fallback for older server versions without helper
@@ -14,6 +15,7 @@ except ImportError:  # Fallback for older server versions without helper
         for segment in resource_path:
             resource = resource.joinpath(segment)
         return str(resource)
+
 
 
 def _convert_csv_value(value):
