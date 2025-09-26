@@ -13,12 +13,12 @@
         "account_accountant",
     ],
     "data": [
-        "data/account_chart_template_data.xml",
         "data/account_tax_tags.xml",
         "report/report_sales_purchase.xml",
         "report/report_sales_purchase_templates.xml",
         "wizard/tax_report_wizard_views.xml",
     ],
+    "post_init_hook": "post_init_hook",
     "qweb": [],
     "demo": [],   
 }
