@@ -3,6 +3,8 @@ import csv
 from odoo import models, _
 from odoo.addons.account.models.chart_template import template
 
+from ..hooks import _ensure_chart_template
+
 try:
     from odoo.modules.module import get_module_resource
 except ImportError:  # Fallback for older server versions without helper
@@ -32,6 +34,11 @@ def _convert_csv_value(value):
 class L10nCRTemplate(models.AbstractModel):
     _name = 'l10n_cr_custom.chart.template'
     _inherit = 'account.chart.template'
+
+    def _register_hook(self):
+        res = super()._register_hook()
+        _ensure_chart_template(self.env)
+        return res
 
     def _load_template_from_csv(self, relative_path):
         path = get_module_resource('l10n_cr_custom_19_v1', relative_path)
