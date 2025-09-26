@@ -20,7 +20,5 @@
         "wizard/tax_report_wizard_views.xml",
     ],
     "qweb": [],
-    "demo": [],
-    "installable": True,
-    "application": False,
+    "demo": [],   
 }
