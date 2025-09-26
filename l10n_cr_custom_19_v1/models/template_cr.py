@@ -92,13 +92,22 @@ class L10nCRTemplate(models.AbstractModel):
                 'complete_tax_set': True,
                 'country_id': 'base.cr',
                 'chart_template_ref': 'l10n_cr_custom_19_v1.cr_custom',
-
             },
             'property_account_receivable_id': 'l10n_cr_custom_19_v1.cr_coa_1040101',
             'property_account_payable_id': 'l10n_cr_custom_19_v1.cr_coa_2010101',
+            'default_sale_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_v_sale',
+            'default_purchase_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_c_purchase',
+            'default_non_deductible_tax_id': 'l10n_cr_custom_19_v1.cr_tax_gasto_corriene_purchase',
             'default_sale_journal_id': 'l10n_cr_custom_19_v1.cr_custom_sale_journal',
             'default_purchase_journal_id': 'l10n_cr_custom_19_v1.cr_custom_purchase_journal',
-
+            'currency_exchange_journal_id': 'l10n_cr_custom_19_v1.cr_custom_currency_exchange_journal',
+            'tax_closing_journal_id': 'l10n_cr_custom_19_v1.cr_custom_tax_closing_journal',
+            'default_pos_receivable_account_id': 'l10n_cr_custom_19_v1.cr_coa_1040201',
+            'default_pos_payable_account_id': 'l10n_cr_custom_19_v1.cr_coa_2010201',
+            'default_cash_difference_income_account_id': 'l10n_cr_custom_19_v1.cr_coa_999001',
+            'default_cash_difference_expense_account_id': 'l10n_cr_custom_19_v1.cr_coa_999002',
+            'income_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_4410101',
+            'expense_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_5410301',
         }
 
     @template('cr_custom', 'account.group')
@@ -171,11 +180,14 @@ class L10nCRTemplate(models.AbstractModel):
                 'cash_account_code_prefix': '1010301',
                 'transfer_account_code_prefix': '1020401',
                 'account_default_pos_receivable_account_id': 'l10n_cr_custom_19_v1.cr_coa_1040201',
+                'account_default_pos_payable_account_id': 'l10n_cr_custom_19_v1.cr_coa_2010201',
                 'income_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_4410101',
                 'expense_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_5410301',
                 'account_sale_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_v_sale',
                 'account_purchase_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_c_purchase',
                 'income_account_id': 'l10n_cr_custom_19_v1.cr_coa_4110101',
                 'expense_account_id': 'l10n_cr_custom_19_v1.cr_coa_5110101',
+                'account_default_cash_difference_income_account_id': 'l10n_cr_custom_19_v1.cr_coa_999001',
+                'account_default_cash_difference_expense_account_id': 'l10n_cr_custom_19_v1.cr_coa_999002',
             }
         }
