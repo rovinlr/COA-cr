@@ -2,7 +2,20 @@ import csv
 
 from odoo import models, _
 from odoo.addons.account.models.chart_template import template
-from odoo.modules.module import get_module_resource
+
+try:
+    from odoo.modules.module import get_module_resource
+except ImportError:  # Fallback for older server versions without helper
+    from importlib import import_module
+    from importlib.resources import files
+
+    def get_module_resource(module_name, *resource_path):
+        module = import_module(module_name)
+        resource = files(module)
+        for segment in resource_path:
+            resource = resource.joinpath(segment)
+        return str(resource)
+
 
 
 def _convert_csv_value(value):
