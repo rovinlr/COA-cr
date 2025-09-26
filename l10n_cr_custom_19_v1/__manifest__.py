@@ -16,11 +16,10 @@
         "data/template/account.tax-cr.csv",
         "data/template/account.fiscal.position-cr.csv",
         "report/report_sales_purchase.xml",
+        "report/report_sales_purchase_templates.xml",
         "wizard/tax_report_wizard_views.xml",
     ],
-    "qweb": [
-        "report/report_sales_purchase_templates.xml"
-    ],
+    "qweb": [],
     "demo": [],
     "installable": True,
     "application": False,
