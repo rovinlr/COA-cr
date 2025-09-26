@@ -2,7 +2,7 @@ from odoo import fields, models
 
 
 class TaxReportWizard(models.TransientModel):
-    _name = 'l10n.cr.tax.report.wizard'
+    _name = 'l10n.cr.custom.tax.report.wizard'
     _description = 'Asistente de Reporte de Compras y Ventas'
 
     date_from = fields.Date(string='Fecha desde')

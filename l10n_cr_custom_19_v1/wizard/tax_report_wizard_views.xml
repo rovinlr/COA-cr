@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="view_tax_report_wizard_form" model="ir.ui.view">
-        <field name="name">l10n.cr.tax.report.wizard.form</field>
-        <field name="model">l10n.cr.tax.report.wizard</field>
+        <field name="name">l10n.cr.custom.tax.report.wizard.form</field>
+        <field name="model">l10n.cr.custom.tax.report.wizard</field>
         <field name="arch" type="xml">
             <form string="Reporte de Compras y Ventas">
                 <group>
@@ -23,7 +23,7 @@
 
     <record id="action_tax_report_wizard" model="ir.actions.act_window">
         <field name="name">Reporte de Compras y Ventas</field>
-        <field name="res_model">l10n.cr.tax.report.wizard</field>
+        <field name="res_model">l10n.cr.custom.tax.report.wizard</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="view_tax_report_wizard_form"/>
         <field name="target">new</field>
