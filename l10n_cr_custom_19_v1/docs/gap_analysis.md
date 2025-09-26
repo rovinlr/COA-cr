@@ -5,7 +5,7 @@ This note summarizes the key elements that prevent the custom package from behav
 ## Manifest dependencies and data files
 
 * The module currently depends only on `account`, so core localizations such as `l10n_latam_base`, `l10n_latam_invoice_document`, or reporting helpers are never installed. The official module requires several of these add-ons before the chart template is usable. 【F:l10n_cr_custom_19_v1/__manifest__.py†L3-L22】
-* Only CSV templates and a couple of report/view definitions are loaded. There are no XML records to expose the chart template, taxes, or fiscal positions to the chart installation wizard, so the data never becomes available even though the CSV files exist in `data/template`. 【F:l10n_cr_custom_19_v1/__manifest__.py†L13-L21】
+* Only CSV templates and a couple of report/view definitions are loaded. There are no XML records to expose the chart template, taxes, or fiscal positions to the chart installation wizard, so the data never becomes available even though the CSV files exist in `data/template`. ✅ Se añadió `data/account_chart_template.xml` para crear el registro base del plan contable y hacerlo visible en el asistente. 【F:l10n_cr_custom_19_v1/__manifest__.py†L13-L21】【F:l10n_cr_custom_19_v1/data/account_chart_template.xml†L1-L12】
 
 ## Chart template implementation
 
