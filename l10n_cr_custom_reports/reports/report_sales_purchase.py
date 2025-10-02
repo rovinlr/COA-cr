@@ -3,6 +3,7 @@
 from collections import defaultdict
 
 from odoo import fields, models
+from odoo.tools import formatLang
 
 
 class ReportSalesPurchase(models.AbstractModel):
@@ -90,6 +91,11 @@ class ReportSalesPurchase(models.AbstractModel):
 
         show_details = bool(self.env.context.get('report_detail') or (data or {}).get('report_detail'))
 
+        def _format_lang(amount, **kwargs):
+            options = {'currency_obj': company_currency}
+            options.update(kwargs)
+            return formatLang(self.env, amount, **options)
+
         return {
             'doc_ids': relevant_moves.ids,
             'doc_model': 'account.move',
@@ -106,6 +112,7 @@ class ReportSalesPurchase(models.AbstractModel):
             'show_details': show_details,
             'company': company,
             'company_currency': company_currency,
+            'formatLang': _format_lang,
         }
 
 
