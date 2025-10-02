@@ -8,8 +8,7 @@
     "license": "LGPL-3",
     "depends": [
         "account",
-        "l10n_cr_custom_19_v1",
-    ],
+            ],
     "data": [
         "wizard/tax_report_wizard_views.xml",
         "report/report_sales_purchase.xml",
