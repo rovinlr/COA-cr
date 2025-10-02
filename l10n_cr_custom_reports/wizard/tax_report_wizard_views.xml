@@ -34,6 +34,6 @@
         name="Reporte de Compras y Ventas"
         parent="account.account_transactions_menu"
         action="action_tax_report_wizard"
-        sequence="75"
+        sequence="100"
     />
 </odoo>
