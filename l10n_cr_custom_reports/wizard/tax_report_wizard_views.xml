@@ -13,8 +13,8 @@
                     </group>
                 </group>
                 <footer>
-                    <button name="action_print_detail" type="object" class="btn-primary" string="Imprimir detallado"/>
-                    <button name="action_print_summary" type="object" class="btn-secondary" string="Imprimir resumen"/>
+                    <button name="action_print_detail" type="object" class="btn-primary" string="Ver detallado"/>
+                    <button name="action_print_summary" type="object" class="btn-secondary" string="Ver resumen"/>
                     <button special="cancel" class="btn-link" string="Cancelar"/>
                 </footer>
             </form>
@@ -32,7 +32,7 @@
     <menuitem
         id="menu_tax_report_root"
         name="Reporte de Compras y Ventas"
-        parent="account.menu_finance_reports"
+        parent="account.menu_finance"
         action="action_tax_report_wizard"
         sequence="75"
     />

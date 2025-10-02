@@ -16,6 +16,33 @@
                     <p>
                         <span t-esc="company.name"/>
                     </p>
+                    <t t-if="date_from or date_to or target_move_label">
+                        <p>
+                            <t t-if="date_from or date_to">
+                                <span>Período:
+                                    <t t-if="date_from and date_to">
+                                        <span>
+                                            <span t-esc="format_date(date_from)"/>
+                                            -
+                                            <span t-esc="format_date(date_to)"/>
+                                        </span>
+                                    </t>
+                                    <t t-elif="date_from">
+                                        <span>Desde <span t-esc="format_date(date_from)"/></span>
+                                    </t>
+                                    <t t-elif="date_to">
+                                        <span>Hasta <span t-esc="format_date(date_to)"/></span>
+                                    </t>
+                                </span>
+                            </t>
+                            <t t-if="target_move_label">
+                                <t t-if="date_from or date_to">
+                                    <span class="mx-2">|</span>
+                                </t>
+                                <span>Movimientos: <span t-esc="target_move_label"/></span>
+                            </t>
+                        </p>
+                    </t>
                     <t t-if="sale_summary">
                         <h3>Ventas</h3>
                         <table class="table table-sm o_main_table">
