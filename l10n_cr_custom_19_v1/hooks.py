@@ -1,4 +1,9 @@
+"""Hooks aligned with the upstream ``l10n_cr`` implementation."""
+
 from odoo import SUPERUSER_ID, api
+
+
+MODULE_NAME = "l10n_cr_custom_19_v1"
 
 
 def _ensure_chart_template(env):
@@ -11,7 +16,7 @@ def _ensure_chart_template(env):
         return
 
     template_model = env['account.chart.template']
-    template = env.ref('l10n_cr_custom_19_v1.cr_custom', raise_if_not_found=False)
+    template = env.ref(f"{MODULE_NAME}.cr_custom", raise_if_not_found=False)
 
     country = env.ref('base.cr')
     base_values = {
@@ -28,7 +33,7 @@ def _ensure_chart_template(env):
     else:
         template = template_model.create(values)
         env['ir.model.data'].create({
-            'module': 'l10n_cr_custom_19_v1',
+            'module': MODULE_NAME,
             'name': 'cr_custom',
             'model': 'account.chart.template',
             'res_id': template.id,

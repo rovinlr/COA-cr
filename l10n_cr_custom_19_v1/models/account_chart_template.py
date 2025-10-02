@@ -1,9 +1,19 @@
+"""Costa Rican chart template customizations.
+
+This module mirrors the structure of ``odoo/addons/l10n_cr`` in version 19.0
+so that the custom chart template keeps benefiting from the upstream
+improvements (e.g. CSV driven template loading and hook registration).
+"""
+
 import csv
 
 from odoo import models, _
 from odoo.addons.account.models.chart_template import template
 
 from ..hooks import _ensure_chart_template
+
+
+MODULE_NAME = "l10n_cr_custom_19_v1"
 
 try:
     from odoo.modules.module import get_module_resource
@@ -31,9 +41,11 @@ def _convert_csv_value(value):
         except ValueError:
             return value
 
-class L10nCRTemplate(models.AbstractModel):
-    _name = 'l10n_cr_custom.chart.template'
-    _inherit = 'account.chart.template'
+class AccountChartTemplateCR(models.AbstractModel):
+    """Load the Costa Rican localisation template from CSV files."""
+
+    _name = "l10n_cr_custom.chart.template"
+    _inherit = "account.chart.template"
 
     def _register_hook(self):
         res = super()._register_hook()
@@ -41,7 +53,7 @@ class L10nCRTemplate(models.AbstractModel):
         return res
 
     def _load_template_from_csv(self, relative_path):
-        path = get_module_resource('l10n_cr_custom_19_v1', relative_path)
+        path = get_module_resource(MODULE_NAME, relative_path)
         result = {}
         with open(path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
@@ -81,6 +93,11 @@ class L10nCRTemplate(models.AbstractModel):
         sub_container = container.setdefault(head, {})
         self._assign_template_value(sub_container, tail, raw_value, row_cache)
 
+    def _xmlid(self, name):
+        """Return a fully qualified xmlid for the current module."""
+
+        return f"{MODULE_NAME}.{name}"
+
     @template('cr_custom', 'account.chart.template')
     def _get_cr_custom_template_data(self):
         # Minimal template data; code_digits set to 7 based on provided CoA
@@ -91,23 +108,23 @@ class L10nCRTemplate(models.AbstractModel):
                 'code_digits': 7,
                 'complete_tax_set': True,
                 'country_id': 'base.cr',
-                'chart_template_ref': 'l10n_cr_custom_19_v1.cr_custom',
+                'chart_template_ref': self._xmlid('cr_custom'),
             },
-            'property_account_receivable_id': 'l10n_cr_custom_19_v1.cr_coa_1040101',
-            'property_account_payable_id': 'l10n_cr_custom_19_v1.cr_coa_2010101',
-            'default_sale_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_v_sale',
-            'default_purchase_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_c_purchase',
-            'default_non_deductible_tax_id': 'l10n_cr_custom_19_v1.cr_tax_gasto_corriene_purchase',
-            'default_sale_journal_id': 'l10n_cr_custom_19_v1.cr_custom_sale_journal',
-            'default_purchase_journal_id': 'l10n_cr_custom_19_v1.cr_custom_purchase_journal',
-            'currency_exchange_journal_id': 'l10n_cr_custom_19_v1.cr_custom_currency_exchange_journal',
-            'tax_closing_journal_id': 'l10n_cr_custom_19_v1.cr_custom_tax_closing_journal',
-            'default_pos_receivable_account_id': 'l10n_cr_custom_19_v1.cr_coa_1040201',
-            'default_pos_payable_account_id': 'l10n_cr_custom_19_v1.cr_coa_2010201',
-            'default_cash_difference_income_account_id': 'l10n_cr_custom_19_v1.cr_coa_999001',
-            'default_cash_difference_expense_account_id': 'l10n_cr_custom_19_v1.cr_coa_999002',
-            'income_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_4410101',
-            'expense_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_5410301',
+            'property_account_receivable_id': self._xmlid('cr_coa_1040101'),
+            'property_account_payable_id': self._xmlid('cr_coa_2010101'),
+            'default_sale_tax_id': self._xmlid('cr_tax_iva_13_bienes_v_sale'),
+            'default_purchase_tax_id': self._xmlid('cr_tax_iva_13_bienes_c_purchase'),
+            'default_non_deductible_tax_id': self._xmlid('cr_tax_gasto_corriene_purchase'),
+            'default_sale_journal_id': self._xmlid('cr_custom_sale_journal'),
+            'default_purchase_journal_id': self._xmlid('cr_custom_purchase_journal'),
+            'currency_exchange_journal_id': self._xmlid('cr_custom_currency_exchange_journal'),
+            'tax_closing_journal_id': self._xmlid('cr_custom_tax_closing_journal'),
+            'default_pos_receivable_account_id': self._xmlid('cr_coa_1040201'),
+            'default_pos_payable_account_id': self._xmlid('cr_coa_2010201'),
+            'default_cash_difference_income_account_id': self._xmlid('cr_coa_999001'),
+            'default_cash_difference_expense_account_id': self._xmlid('cr_coa_999002'),
+            'income_currency_exchange_account_id': self._xmlid('cr_coa_4410101'),
+            'expense_currency_exchange_account_id': self._xmlid('cr_coa_5410301'),
         }
 
     @template('cr_custom', 'account.group')
@@ -141,33 +158,33 @@ class L10nCRTemplate(models.AbstractModel):
                 'name': _('Ventas CR'),
                 'type': 'sale',
                 'code': 'VCR',
-                'default_account_id': 'l10n_cr_custom_19_v1.cr_coa_4110101',
-                'payment_debit_account_id': 'l10n_cr_custom_19_v1.cr_coa_1020501',
-                'payment_credit_account_id': 'l10n_cr_custom_19_v1.cr_coa_1020501',
+                'default_account_id': self._xmlid('cr_coa_4110101'),
+                'payment_debit_account_id': self._xmlid('cr_coa_1020501'),
+                'payment_credit_account_id': self._xmlid('cr_coa_1020501'),
             },
             'cr_custom_purchase_journal': {
                 'name': _('Compras CR'),
                 'type': 'purchase',
                 'code': 'PCR',
-                'default_account_id': 'l10n_cr_custom_19_v1.cr_coa_5110101',
-                'payment_debit_account_id': 'l10n_cr_custom_19_v1.cr_coa_1020601',
-                'payment_credit_account_id': 'l10n_cr_custom_19_v1.cr_coa_1020601',
+                'default_account_id': self._xmlid('cr_coa_5110101'),
+                'payment_debit_account_id': self._xmlid('cr_coa_1020601'),
+                'payment_credit_account_id': self._xmlid('cr_coa_1020601'),
             },
             'cr_custom_currency_exchange_journal': {
                 'name': _('Diferencias de cambio'),
                 'type': 'general',
                 'code': 'EXC',
-                'default_account_id': 'l10n_cr_custom_19_v1.cr_coa_4410101',
-                'default_debit_account_id': 'l10n_cr_custom_19_v1.cr_coa_5410301',
-                'default_credit_account_id': 'l10n_cr_custom_19_v1.cr_coa_4410101',
+                'default_account_id': self._xmlid('cr_coa_4410101'),
+                'default_debit_account_id': self._xmlid('cr_coa_5410301'),
+                'default_credit_account_id': self._xmlid('cr_coa_4410101'),
             },
             'cr_custom_tax_closing_journal': {
                 'name': _('Cierre de impuestos'),
                 'type': 'general',
                 'code': 'TAX',
-                'default_account_id': 'l10n_cr_custom_19_v1.cr_coa_2020201',
-                'default_debit_account_id': 'l10n_cr_custom_19_v1.cr_coa_2020201',
-                'default_credit_account_id': 'l10n_cr_custom_19_v1.cr_coa_2020201',
+                'default_account_id': self._xmlid('cr_coa_2020201'),
+                'default_debit_account_id': self._xmlid('cr_coa_2020201'),
+                'default_credit_account_id': self._xmlid('cr_coa_2020201'),
             },
         }
 
@@ -179,15 +196,15 @@ class L10nCRTemplate(models.AbstractModel):
                 'bank_account_code_prefix': '1010101',
                 'cash_account_code_prefix': '1010301',
                 'transfer_account_code_prefix': '1020401',
-                'account_default_pos_receivable_account_id': 'l10n_cr_custom_19_v1.cr_coa_1040201',
-                'account_default_pos_payable_account_id': 'l10n_cr_custom_19_v1.cr_coa_2010201',
-                'income_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_4410101',
-                'expense_currency_exchange_account_id': 'l10n_cr_custom_19_v1.cr_coa_5410301',
-                'account_sale_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_v_sale',
-                'account_purchase_tax_id': 'l10n_cr_custom_19_v1.cr_tax_iva_13_bienes_c_purchase',
-                'income_account_id': 'l10n_cr_custom_19_v1.cr_coa_4110101',
-                'expense_account_id': 'l10n_cr_custom_19_v1.cr_coa_5110101',
-                'account_default_cash_difference_income_account_id': 'l10n_cr_custom_19_v1.cr_coa_999001',
-                'account_default_cash_difference_expense_account_id': 'l10n_cr_custom_19_v1.cr_coa_999002',
+                'account_default_pos_receivable_account_id': self._xmlid('cr_coa_1040201'),
+                'account_default_pos_payable_account_id': self._xmlid('cr_coa_2010201'),
+                'income_currency_exchange_account_id': self._xmlid('cr_coa_4410101'),
+                'expense_currency_exchange_account_id': self._xmlid('cr_coa_5410301'),
+                'account_sale_tax_id': self._xmlid('cr_tax_iva_13_bienes_v_sale'),
+                'account_purchase_tax_id': self._xmlid('cr_tax_iva_13_bienes_c_purchase'),
+                'income_account_id': self._xmlid('cr_coa_4110101'),
+                'expense_account_id': self._xmlid('cr_coa_5110101'),
+                'account_default_cash_difference_income_account_id': self._xmlid('cr_coa_999001'),
+                'account_default_cash_difference_expense_account_id': self._xmlid('cr_coa_999002'),
             }
         }

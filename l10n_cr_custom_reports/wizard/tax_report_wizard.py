@@ -1,4 +1,9 @@
+"""Wizard that mirrors the report launcher from ``l10n_cr`` version 19."""
+
 from odoo import fields, models
+
+
+MODULE_NAME = "l10n_cr_custom_reports"
 
 
 class TaxReportWizard(models.TransientModel):
@@ -51,9 +56,9 @@ class TaxReportWizard(models.TransientModel):
     def _run_report(self, detailed=False):
         self.ensure_one()
         moves = self._get_moves()
-        action_xmlid = 'l10n_cr_custom_19_v1.action_report_sales_purchase'
+        action_xmlid = f"{MODULE_NAME}.action_report_sales_purchase"
         if detailed:
-            action_xmlid = 'l10n_cr_custom_19_v1.action_report_sales_purchase_detail'
+            action_xmlid = f"{MODULE_NAME}.action_report_sales_purchase_detail"
         action = self.env.ref(action_xmlid)
         context = dict(self.env.context)
         context.update({'report_detail': detailed})

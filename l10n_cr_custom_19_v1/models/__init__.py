@@ -1,1 +1,1 @@
-from . import template_cr
+from . import account_chart_template
