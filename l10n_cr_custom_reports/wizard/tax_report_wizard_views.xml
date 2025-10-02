@@ -32,7 +32,7 @@
     <menuitem
         id="menu_tax_report_root"
         name="Reporte de Compras y Ventas"
-        parent="account.menu_finance_entries"
+        parent="account.account_transactions_menu"
         action="action_tax_report_wizard"
         sequence="75"
     />
