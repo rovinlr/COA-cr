@@ -53,20 +53,27 @@ class TaxReportWizard(models.TransientModel):
         domain = self._prepare_domain()
         return self.env['account.move'].search(domain, order='invoice_date, date, name')
 
-    def _run_report(self, detailed=False):
+    def _run_report(self, detailed=False, report_format='html'):
         self.ensure_one()
         moves = self._get_moves()
-        action_xmlid = f"{MODULE_NAME}.action_report_sales_purchase"
-        if detailed:
-            action_xmlid = f"{MODULE_NAME}.action_report_sales_purchase_detail"
+        action_base = "action_report_sales_purchase_detail" if detailed else "action_report_sales_purchase"
+        if report_format == 'html':
+            action_xmlid = f"{MODULE_NAME}.{action_base}_html"
+        else:
+            action_xmlid = f"{MODULE_NAME}.{action_base}"
         action = self.env.ref(action_xmlid)
         context = dict(self.env.context)
         context.update({'report_detail': detailed})
-        data = {'report_detail': detailed}
+        data = {
+            'report_detail': detailed,
+            'date_from': fields.Date.to_string(self.date_from) if self.date_from else False,
+            'date_to': fields.Date.to_string(self.date_to) if self.date_to else False,
+            'target_move': self.target_move,
+        }
         return action.with_context(context).report_action(moves, data=data)
 
     def action_print_summary(self):
-        return self._run_report(detailed=False)
+        return self._run_report(detailed=False, report_format='html')
 
     def action_print_detail(self):
-        return self._run_report(detailed=True)
+        return self._run_report(detailed=True, report_format='html')

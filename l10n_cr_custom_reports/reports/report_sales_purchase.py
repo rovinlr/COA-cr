@@ -11,6 +11,15 @@ class ReportSalesPurchase(models.AbstractModel):
     _description = 'Reporte de Compras y Ventas'
 
     def _get_report_values(self, docids, data=None):
+        data = data or {}
+        date_from = data.get('date_from')
+        date_to = data.get('date_to')
+        if date_from:
+            date_from = fields.Date.to_date(date_from)
+        if date_to:
+            date_to = fields.Date.to_date(date_to)
+        target_move = data.get('target_move') or 'posted'
+
         moves = self.env['account.move'].browse(docids)
         relevant_moves = moves.filtered(
             lambda m: m.move_type in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')
@@ -99,6 +108,10 @@ class ReportSalesPurchase(models.AbstractModel):
             if not date:
                 return ''
             return format_date(self.env, date, date_format=date_format)
+        target_move_label = dict(
+            self.env['l10n.cr.custom.tax.report.wizard']._fields['target_move'].selection
+        ).get(target_move, '')
+
         return {
             'doc_ids': relevant_moves.ids,
             'doc_model': 'account.move',
@@ -115,6 +128,10 @@ class ReportSalesPurchase(models.AbstractModel):
             'show_details': show_details,
             'company': company,
             'company_currency': company_currency,
+            'date_from': date_from,
+            'date_to': date_to,
+            'target_move': target_move,
+            'target_move_label': target_move_label,
             'formatLang': _format_lang,
             'format_date': _format_date,
 
