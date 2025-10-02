@@ -13,8 +13,8 @@
                     </group>
                 </group>
                 <footer>
-                    <button name="action_print_detail" type="object" class="btn-primary" string="Imprimir detallado"/>
-                    <button name="action_print_summary" type="object" class="btn-secondary" string="Imprimir resumen"/>
+                    <button name="action_print_detail" type="object" class="btn-primary" string="Ver detallado"/>
+                    <button name="action_print_summary" type="object" class="btn-secondary" string="Ver resumen"/>
                     <button special="cancel" class="btn-link" string="Cancelar"/>
                 </footer>
             </form>
